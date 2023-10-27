@@ -1,0 +1,17 @@
+{
+    "name": "roberts/crypto-rate",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Roberts Bauers",
+            "email": "rrbauerss@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.8"
+    }
+}
