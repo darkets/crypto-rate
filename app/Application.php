@@ -14,7 +14,7 @@ class Application
     public function run()
     {
         while (true) {
-            echo 'Input two currency codes <currency1 currency2>: ';
+            echo 'Input two currency codes (Base: BTC) <currency1 currency2>: ';
             [$firstCrypto, $secondCrypto] = array_map('strtoupper', explode(' ', readline()));
 
             if (empty($firstCrypto) || empty($secondCrypto)) {
