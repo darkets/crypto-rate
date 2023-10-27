@@ -15,7 +15,7 @@ class Application
     {
         while (true) {
             echo 'Input two currency codes <currency1 currency2>: ';
-            [$firstCrypto, $secondCrypto] = explode(' ', readline());
+            [$firstCrypto, $secondCrypto] = array_map('strtoupper', explode(' ', readline()));
 
             if (empty($firstCrypto) || empty($secondCrypto)) {
                 echo 'Input must not be empty!' . PHP_EOL;
