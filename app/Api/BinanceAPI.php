@@ -1,14 +1,15 @@
 <?php
 declare(strict_types=1);
 
-namespace App;
+namespace App\Api;
 
+use App\Collections\CryptoCollection;
+use App\Models\Crypto;
 use GuzzleHttp\Client;
-use GuzzleHttp\Exception\ClientException;
 use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Psr7\Message;
 
-class Api
+class BinanceAPI
 {
     private const BASE_URL = 'https://api4.binance.com/api/v3/ticker/24hr?';
     private const BASE_CRYPTO = 'BTC';

@@ -1,6 +1,8 @@
 <?php
 
-namespace App;
+namespace App\Collections;
+
+use App\Models\Crypto;
 
 class CryptoCollection
 {

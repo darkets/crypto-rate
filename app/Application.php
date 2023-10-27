@@ -3,18 +3,22 @@ declare(strict_types=1);
 
 namespace App;
 
+use App\Api\BinanceAPI;
+use App\Collections\CryptoCollection;
+use app\Models\Crypto;
+
 class Application
 {
-    private Api $api;
+    private BinanceAPI $api;
     public function __construct()
     {
-        $this->api = new Api();
+        $this->api = new BinanceAPI();
     }
 
     public function run()
     {
         while (true) {
-            echo 'Input two currency codes (Base: BTC) <currency1 currency2>: ';
+            echo 'Input two cryptocurrency codes (Base: BTC) <currency1 currency2>: ';
             [$firstCrypto, $secondCrypto] = array_map('strtoupper', explode(' ', readline()));
 
             if (empty($firstCrypto) || empty($secondCrypto)) {
